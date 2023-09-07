@@ -1,3 +1,5 @@
+
+
 async function fetchFavorites(url) {
   const response = await fetch(url);
   const data = await response.json();
@@ -7,30 +9,21 @@ async function fetchFavorites(url) {
 fetchFavorites("assets/php/select.php");
 
 function displayData(data) {
-  // Get the income and expense list elements from the DOM
-  const incomeList = document.getElementById("income-list");
+  // Get the expense list element from the DOM
   const expenseList = document.getElementById("expense-list");
-
-  // Clear the lists
-  incomeList.innerHTML = "";
   expenseList.innerHTML = "";
 
   // Loop through each expense object in the data array
-  data.forEach((entry) => {
+  data.forEach((expense) => {
+    //   console.log(expense);
     // Create a new list item element
     const newExpenseItem = document.createElement("li");
-    const newIncomeItem = document.createElement("li");
 
     // Set the text content of the new list item to display the expense name and amount
-    newExpenseItem.textContent = `${entry.expense_name}: ${entry.expense_amount}`;
-    newIncomeItem.textContent = `${entry.expense_name}: ${entry.expense_amount}`;
+    newExpenseItem.innerHTML = `${expense.expense_name}: ${expense.expense_amount}`;
 
-    // Check the category of the expense and append it to the appropriate list
-    if (entry.category === "income") {
-      incomeList.appendChild(newIncomeItem);
-    } else if (entry.category === "expense") {
-      expenseList.appendChild(newExpenseItem);
-    }
+    // Append the new list item to the expense list element in the DOM
+    expenseList.appendChild(newExpenseItem);
   });
 }
 

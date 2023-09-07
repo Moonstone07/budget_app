@@ -16,9 +16,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check if the connection was successful
 $db_response = [];
 
-$db_response['success'] = 'not set';
+// $db_response['success'] = 'not set';
 if (!$conn) {
     $db_response['success'] = false;
+    $db_response['message'] = "Connection failed: " . mysqli_connect_error();
 }else{
     $db_response['success'] = true;
 }

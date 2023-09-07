@@ -29,9 +29,4 @@ mysqli_close($conn);
 
 
 
-// // Get expense data from POST request
-// $expenseName = $_POST['name'];
-// $expenseAmount = $_POST['amount'];
-
-
 ?>

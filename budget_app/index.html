@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Budget App</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2f6fae777f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/budget.css" />
+  </head>
+  <body>
     <h1>Budget App</h1>
     <form id="expense-form">
-        <label for="expense-name">Expense Name:</label>
-        <input type="text" id="expense-name" name="expense-name" required>
-        <label for="expense-amount">Expense Amount:</label>
-        <input type="number" id="expense-amount" name="expense-amount" required>
-        <button type="submit">Add Expense</button>
+      <h2>Dashboard</h2>
+      <section class="fields">
+        <label for="category">Select Category</label>
+        <select id="category" name="category">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+      </section>
+      <section class="fields">
+        <label for="expense-name">Name</label>
+        <input type="text" id="expense-name" name="expense-name" required />
+        <label for="expense-amount">Amount</label>
+        <input
+          type="number"
+          id="expense-amount"
+          name="expense-amount"
+          required
+        />
+        <button type="submit" id="add-expense">
+          <i class="fa-solid fa-square-plus"></i>
+        </button>
+      </section>
+      <section class="list">
+        <ul id="expense-list"></ul>
+        <ul id="income-list"></ul>
+      </section>
     </form>
-    <ul id="expense-list"></ul>
-    <script src="app.js"></script>
-</body>
+
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>

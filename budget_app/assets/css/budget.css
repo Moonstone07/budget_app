@@ -1,0 +1,126 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin and padding
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: rgb(62, 7, 62);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+form {
+  background: #f5f5f5;
+  height: 100vh;
+  border-radius: 30px 30px 0 0;
+  padding: 30px;
+}
+
+form .fields {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+i {
+  font-size: 30px;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+.list {
+  padding: 30px;
+}
