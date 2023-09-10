@@ -14,7 +14,7 @@ try {
     $query = "INSERT INTO expenses (expense_name, expense_amount, category) VALUES (?, ?, ?)";
 
     if ($stmt = mysqli_prepare($conn, $query)) {
-        mysqli_stmt_bind_param($stmt, 'sds', $_REQUEST["expense-name"], $_REQUEST["expense-amount"], $_REQUEST["category"]);
+        mysqli_stmt_bind_param($stmt, 'sds', $_REQUEST["expense_name"], $_REQUEST["expense_amount"], $_REQUEST["category"]);
 
         mysqli_stmt_execute($stmt);
 
@@ -24,8 +24,8 @@ try {
             $results[] = [
                 "insertedRows" => $insertedRows,
                 "id" => $conn->insert_id,
-                "expense_name" => $_REQUEST["expense-name"],
-                "expense_amount" => $_REQUEST["expense-amount"],
+                "expense_name" => $_REQUEST["expense_name"],
+                "expense_amount" => $_REQUEST["expense_amount"],
                 "category" => $_REQUEST["category"],
             ];
         } else {
