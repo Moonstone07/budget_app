@@ -7,8 +7,8 @@ $results = [];
 $insertedRows = 0;
 
 try {
-    if (!isset($_REQUEST["expense-name"]) || !isset($_REQUEST["expense-amount"]) || !isset($_REQUEST["category"])) {
-        throw new Exception('Required data is missing i.e. expense-name, expense-amount, or category are missing');
+    if (!isset($_REQUEST["expense_name"]) || !isset($_REQUEST["expense_amount"]) || !isset($_REQUEST["category"])) {
+        throw new Exception('Required data is missing i.e. name, amount, or category are missing');
     }
 
     $query = "INSERT INTO expenses (expense_name, expense_amount, category) VALUES (?, ?, ?)";

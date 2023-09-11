@@ -86,28 +86,39 @@ const income_section = document.getElementById("income_section");
 const expense_section = document.getElementById("expense_section");
 const all_section = document.getElementById("all_section");
 
+// Add click event listeners to tab buttons
+income_tab.addEventListener("click", () => show_section(income_section));
+
+expense_tab.addEventListener("click", () => show_section(expense_section));
+all_tab.addEventListener("click", () => show_section(all_section));
+
 // Set the all Section as the initially displayed section
-showSection(all_section);
+show_section(all_section);
 
 // Function to show a specific section and hide the others
-function showSection(sectionToShow) {
-  // Create an array of tabs and sections
-  const tabs = [income_tab, expense_tab, all_tab];
-  const sections = [income_section, expense_section, all_section];
-
+function show_section(section_to_show) {
   // Hide all sections
-  sections.forEach((section) => {
-    section.style.display = "none";
+  income_section.style.display = "none";
+  expense_section.style.display = "none";
+  all_section.style.display = "none";
+
+  // Remove active-tab class from all buttons
+  document.querySelectorAll(".tabs button").forEach((button) => {
+    button.classList.remove("active-tab");
   });
 
-  // Show the selected section
-  sectionToShow.style.display = "block";
-}
+  // Add "active-tab" class to the clicked tab's button
+  if (section_to_show === income_section) {
+    income_tab.classList.add("active-tab");
+  } else if (section_to_show === expense_section) {
+    expense_tab.classList.add("active-tab");
+  } else if (section_to_show === all_section) {
+    all_tab.classList.add("active-tab");
+  }
 
-// Add click event listeners to tab buttons
-income_tab.addEventListener("click", () => showSection(income_section));
-expense_tab.addEventListener("click", () => showSection(expense_section));
-all_tab.addEventListener("click", () => showSection(all_section));
+  // Show the selected section
+  section_to_show.style.display = "block";
+}
 
 function calculate_balance() {
   const balance_element = document.getElementById("balance");
@@ -130,18 +141,3 @@ function calculate_total(list) {
     return total + amount;
   }, 0);
 }
-
-// function show_section(section_to_show) {
-//   // Add click event listeners to tab buttons
-//   income_tab.addEventListener("click", () => show_section(income_section));
-//   expense_tab.addEventListener("click", () => show_section(expense_section));
-//   all_tab.addEventListener("click", () => show_section(all_section));
-
-//   // Hide all sections
-//   income_section.style.display = "none";
-//   expense_section.style.display = "none";
-//   all_section.style.display = "none";
-
-//   // Show the selected section
-//   section_to_show.style.display = "block";
-// }
