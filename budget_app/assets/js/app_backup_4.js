@@ -86,38 +86,28 @@ const income_section = document.getElementById("income_section");
 const expense_section = document.getElementById("expense_section");
 const all_section = document.getElementById("all_section");
 
-// Add click event listeners to tab buttons
-income_tab.addEventListener("click", () => show_section(income_section));
-expense_tab.addEventListener("click", () => show_section(expense_section));
-all_tab.addEventListener("click", () => show_section(all_section));
-
 // Set the all Section as the initially displayed section
-show_section(all_section);
+showSection(all_section);
 
 // Function to show a specific section and hide the others
-function show_section(section_to_show) {
-  // Hide all sections
-  income_section.style.display = "none";
-  expense_section.style.display = "none";
-  all_section.style.display = "none";
+function showSection(sectionToShow) {
+  // Create an array of tabs and sections
+  const tabs = [income_tab, expense_tab, all_tab];
+  const sections = [income_section, expense_section, all_section];
 
-  // Remove active-tab class from all buttons
-  document.querySelectorAll(".tabs button").forEach((button) => {
-    button.classList.remove("active-tab");
+  // Hide all sections
+  sections.forEach((section) => {
+    section.style.display = "none";
   });
 
-  // Add "active-tab" class to the clicked tab's button
-  if (section_to_show === income_section) {
-    income_tab.classList.add("active-tab");
-  } else if (section_to_show === expense_section) {
-    expense_tab.classList.add("active-tab");
-  } else if (section_to_show === all_section) {
-    all_tab.classList.add("active-tab");
-  }
-
   // Show the selected section
-  section_to_show.style.display = "block";
+  sectionToShow.style.display = "block";
 }
+
+// Add click event listeners to tab buttons
+income_tab.addEventListener("click", () => showSection(income_section));
+expense_tab.addEventListener("click", () => showSection(expense_section));
+all_tab.addEventListener("click", () => showSection(all_section));
 
 function calculate_balance() {
   const balance_element = document.getElementById("balance");

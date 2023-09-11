@@ -88,7 +88,6 @@ const all_section = document.getElementById("all_section");
 
 // Add click event listeners to tab buttons
 income_tab.addEventListener("click", () => show_section(income_section));
-
 expense_tab.addEventListener("click", () => show_section(expense_section));
 all_tab.addEventListener("click", () => show_section(all_section));
 
