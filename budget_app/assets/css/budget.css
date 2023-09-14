@@ -88,15 +88,14 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 80px;
-  margin-top: 20px;
+  font-size: 5em;
+  margin-top: 1.25em;
   font-weight: 800;
-
 }
 
 h2 {
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 3.125em;
+  margin-bottom: 1.875em;
 }
 
 h3,
@@ -114,244 +113,45 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5em;
   margin: 0 auto;
 }
 
 section {
-  margin-bottom: 30px;
+  margin-bottom: 1.875em;
 }
 
 .account {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 80px;
-}
-
-form .fields {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/*
-  2. Remove default margin and padding
-*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/*
-  5. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/*
-  6. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/*
-  7. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-/*
-  8. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
-
-:root {
-  --text: #08082b;
-  --text_light: #f1f1f1;
-  --background: #d8d8f8;
-  --primary: #525266;
-  --secondary: #babaf2;
-  --accent: #2323be;
-
-  --font-family: 'Roboto', sans-serif;
-  --font-size: 16px;
-  --font-weight: 400;
-  --line-height: 1.5;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-}
-
-body {
-  background: var(--background);
-  color: var(--text);
-  font-family: var(--font-family);
-  height: 100vh;
-}
-
-h1 {
-  text-align: center;
-  font-size: 80px;
-  margin: 80px 0;
-}
-
-h2 {
-  font-size: 50px;
-  margin: 20px 0;
-}
-
-h3,
-h4 {
-  font-size: 2em;
-  text-align: center;
-}
-
-section {
-  margin: 40px 0;
-}
-
-.account {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+  gap: 5em;
 }
 
 form {
   /* height: 100vh; */
-  padding: 30px;
+  padding: 1.875em;
 }
 
 form .fields {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1.25em;
 }
 
 label {
-  font-size: 25px;
+  font-size: 1.5625em;
   font-weight: 600;
 }
 
 select {
-  border: none;
-  outline: var(--primary) 1px solid;
-  background: var(--background);
-  color: var(--text);
-  padding: 16px;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.tabs button {
-  font-size: 40px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.active-tab {
-  color: var(--accent);
-}
-
-i {
-  font-size: 50px;
-  color: var(--primary);
-}
-
-input {
-  border: none;
-  outline: var(--primary) 1px solid;
-  background: var(--background);
-  color: var(--text);
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 25px;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-bottom: var(--secondary) 1px solid;
-}
-
-.category_section {
-  height: 25em;
-  overflow-y: scroll;
-  background: var(--accent);
-  color: var(--secondary);
-  border-radius: 20px;
-  padding: 40px;
-}
-
-.category_section::-webkit-scrollbar {
-  display: none;
-}
-label {
-  font-size: 25px;
+  font-size: 1.5625em;
   font-weight: 600;
-}
-
-select {
-  font-size: 25px;
-  font-weight: 600;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.625em;
+  border-radius: 0.3125em;
   border: none;
-  outline: var(--primary) solid 1px;
+  outline: var(--primary) solid 0.0625em;
   width: 100%;
   background-color: var(--background);
   -webkit-appearance: none;
@@ -362,13 +162,13 @@ select {
     linear-gradient(135deg, var(--primary) 50%, transparent 50%),
     linear-gradient(to right, var(--primary), var(--primary));
   background-position:
-    calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px),
-    calc(100% - 2.5em) 0.5em;
+    calc(100% - 1.25em) calc(1em + 0.125em),
+    calc(100% - 0.9375em) calc(1em + 0.125em),
+    calc(100% - 0.15625em) 0.0625em;
   background-size:
-    5px 5px,
-    5px 5px,
-    1px 1.5em;
+    0.15625em 0.15625em,
+    0.15625em 0.15625em,
+    0.03125em 0.1875em;
   background-repeat: no-repeat;
 }
 
@@ -378,13 +178,13 @@ select:focus {
     linear-gradient(135deg, transparent 50%, var(--accent) 50%),
     linear-gradient(to right, var(--accent), var(--accent));
   background-position:
-    calc(100% - 15px) 1em,
-    calc(100% - 20px) 1em,
-    calc(100% - 2.5em) 0.5em;
+    calc(100% - 0.9375em) 1em,
+    calc(100% - 1.25em) 1em,
+    calc(100% - 0.15625em) 0.0625em;
   background-size:
-    5px 5px,
-    5px 5px,
-    1px 1.5em;
+    0.15625em 0.15625em,
+    0.15625em 0.15625em,
+    0.03125em 0.1875em;
   background-repeat: no-repeat;
   border-color: var(--primary);
 }
@@ -396,11 +196,11 @@ button {
 }
 
 .tabs button {
-  font-size: 40px;
-  margin-right: 30px;
-  padding: 10px 20px;
-  border: var(--accent) 1px solid;
-  border-radius: 16px;
+  font-size: 2.5em;
+  margin-right: 0.625em;
+  padding: 0.625em 1.25em;
+  border: var(--accent) 0.0625em solid;
+  border-radius: 0.625em;
   cursor: pointer;
 }
 
@@ -410,23 +210,23 @@ button {
 }
 
 #all_tab {
-  padding: 10px 60px;
+  padding: 0.625em 3.75em;
 }
 
 i {
-  font-size: 50px;
+  font-size: 2.5em;
   color: var(--primary);
 }
 
 input {
   border: none;
-  outline: var(--primary) 1px solid;
+  outline: var(--primary) 0.0625em solid;
   background: var(--background);
   color: var(--text);
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.625em;
+  border-radius: 0.3125em;
   width: 100%;
-  font-size: 25px;
+  font-size: 1.5625em;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -435,27 +235,23 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* input[type="number"] {
-  -moz-appearance: textfield;
-} */
-
 ul {
   list-style: none;
 }
 
 li {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-bottom: var(--secondary) 1px solid;
+  margin-bottom: 1.25em;
+  padding: 0.625em;
+  border-bottom: var(--secondary) 0.0625em solid;
 }
 
 .category_section {
-  height: 25em;
+  height: 1.5625em;
   overflow-y: scroll;
   background: var(--accent);
   color: var(--secondary);
-  border-radius: 20px;
-  padding: 40px;
+  border-radius: 1.25em;
+  padding: 2.5em;
 }
 
 .category_section::-webkit-scrollbar {
@@ -464,7 +260,7 @@ li {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 1.25em;
 }
 
 footer a {
@@ -472,4 +268,18 @@ footer a {
   color: var(--accent);
   font-weight: 600;
   cursor: pointer;
+}
+
+/* media queries */
+
+@media screen and (min-width: 48em) {
+
+  /* Assuming 1em = 16px */
+  .container {
+    max-width: 50em;
+  }
+
+  .tabs button {
+    font-size: 1.25em;
+  }
 }

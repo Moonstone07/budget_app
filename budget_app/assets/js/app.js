@@ -87,14 +87,28 @@ const expense_section = document.getElementById("expense_section");
 const all_section = document.getElementById("all_section");
 
 // Add click event listeners to tab buttons
-income_tab.addEventListener("click", () => show_section(income_section));
-expense_tab.addEventListener("click", () => show_section(expense_section));
-all_tab.addEventListener("click", () => show_section(all_section));
+// Attach a click event listener to the 'income_tab' element
+income_tab.addEventListener("click", (event) => {
+  // Prevent the default behavior of the click event
+  event.preventDefault();
+  // Call the 'show_section' function and pass in the 'income_section' parameter
+  show_section(income_section);
+});
+expense_tab.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  show_section(expense_section);
+});
+all_tab.addEventListener("click", (event) => {
+  event.preventDefault();
+  show_section(all_section);
+});
 
 // Set the all Section as the initially displayed section
 show_section(all_section);
 
 // Function to show a specific section and hide the others
+
 function show_section(section_to_show) {
   // Hide all sections
   income_section.style.display = "none";
@@ -141,17 +155,4 @@ function calculate_total(list) {
   }, 0);
 }
 
-// function show_section(section_to_show) {
-//   // Add click event listeners to tab buttons
-//   income_tab.addEventListener("click", () => show_section(income_section));
-//   expense_tab.addEventListener("click", () => show_section(expense_section));
-//   all_tab.addEventListener("click", () => show_section(all_section));
 
-//   // Hide all sections
-//   income_section.style.display = "none";
-//   expense_section.style.display = "none";
-//   all_section.style.display = "none";
-
-//   // Show the selected section
-//   section_to_show.style.display = "block";
-// }

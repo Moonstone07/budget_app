@@ -9,82 +9,80 @@
     ></script>
     <!-- google fonts -->
 
-<link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/budget.css" />
   </head>
   <body>
-    <h1>Budget App</h1>
-    <header class="budget_header">
-      <section>
-        <h3 class="title">Balance</h3>
-        <h4 id="balance"></h4>
-      </section>
-      <section class="account">
-        <article class="income">
-          <h3 class="title">Income</h3>
-          <h4 class="income_total"></h4>
-        </article>
-        <div class="chart"></div>
-        <article class="outcome">
-          <h3 class="title">Expense</h3>
-          <h4 class="outcome_total"></h4>
-        </article>
-      </section>
-    </header>
-    <form id="expense_form">
-      <h2>Dashboard</h2>
-      <section class="tabs">
-        <button id="income_tab">Income</button>
-        <button id="expense_tab">Expense</button>
-        <button id="all_tab">All</button>
-      </section>
-
-      <section class="fields">
-        <label for="category">Select Category</label>
-        <select id="category" name="category">
-          <option value="income">Income</option>
-          <option value="expense">Expense</option>
-        </select>
-      </section>
-      <section class="fields">
-        <label for="expense_name">Name</label>
-        <input type="text" id="expense_name" name="expense_name"  />
-        <label for="expense_amount">Amount</label>
-        <input
-          type="number"
-          id="expense_amount"
-          name="expense_amount"
-          
-        />
-        <button type="submit" id="add_expense">
-          <i class="fa-solid fa-square-plus"></i>
-        </button>
-      </section>
-      <section class="wrapper">
-        <section id="income_section" class="category_section">
-          <h3>Income</h3>
-          <ul id="income_list"></ul>
+    <section class="container">
+      <h1>Budget App</h1>
+      <header class="budget_header">
+        <section>
+          <h3 class="title">Balance</h3>
+          <h4 id="balance"></h4>
         </section>
-        <section id="expense_section" class="category_section">
-          <h3>Expense</h3>
-          <ul id="expense_list"></ul>
+        <section class="account">
+          <article class="income">
+            <h3 class="title">Income</h3>
+            <h4 class="income_total"></h4>
+          </article>
+          <div class="chart"></div>
+          <article class="outcome">
+            <h3 class="title">Expense</h3>
+            <h4 class="outcome_total"></h4>
+          </article>
         </section>
-        <section id="all_section" class="category_section">
-          <h3>All</h3>
-          <ul id="all_list"></ul>
+      </header>
+      <form id="expense_form">
+        <h2>Dashboard</h2>
+        <section class="tabs">
+          <button id="income_tab">Income</button>
+          <button id="expense_tab">Expense</button>
+          <button id="all_tab">All</button>
         </section>
-      </section>
-    </form>
-
-    <footer>
-      <nav>
-        <a href="https://github.com/Moonstone07/budget_app" target="_blank"
-          >git hub repo</a
-        >
-      </nav>
-    </footer>
+        <section class="fields">
+          <label for="category">Select Category</label>
+          <select id="category" name="category">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+        </section>
+        <section class="fields">
+          <label for="expense_name">Name</label>
+          <input type="text" id="expense_name" name="expense_name" />
+          <label for="expense_amount">Amount</label>
+          <input type="number" id="expense_amount" name="expense_amount" />
+          <button type="submit" id="add_expense">
+            <i class="fa-solid fa-square-plus"></i>
+          </button>
+        </section>
+        <section class="wrapper">
+          <section id="income_section" class="category_section">
+            <h3>Income</h3>
+            <ul id="income_list"></ul>
+          </section>
+          <section id="expense_section" class="category_section">
+            <h3>Expense</h3>
+            <ul id="expense_list"></ul>
+          </section>
+          <section id="all_section" class="category_section">
+            <h3>All</h3>
+            <ul id="all_list"></ul>
+          </section>
+        </section>
+      </form>
+      <footer>
+        <nav>
+          <a href="https://github.com/Moonstone07/budget_app" target="_blank"
+            >git hub repo</a
+          >
+        </nav>
+      </footer>
+    </section>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
